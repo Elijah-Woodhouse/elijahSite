@@ -9,13 +9,6 @@ function App() {
   return (
 
     <div className="App">
-        <ScrollContainer>
-          <ScrollPage>
-            <Animator>
-              <h2>Hello World!</h2>
-            </Animator>
-          </ScrollPage>
-        </ScrollContainer>
         <HomePage/>
     </div>
   );
