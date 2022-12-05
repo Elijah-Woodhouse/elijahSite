@@ -1,15 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './components/HomePage';
-import { Route } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import React from 'react';
-import { Animator, ScrollContainer, ScrollPage } from 'react-scroll-motion'
 
 function App() {
   return (
 
     <div className="App">
-        <HomePage/>
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+      </Routes>
     </div>
   );
 }

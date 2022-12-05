@@ -1,28 +1,18 @@
 import React from 'react';
-import {Link, useRouteMatch} from 'react-router-dom';
+import { Link, useRouteMatch, useNavigate } from 'react-router-dom';
 import BoulderImage from "../data/nat_pic_boulders_and_tree.jpeg";
 import FenceImage from "../data/nat_pic_fence.jpeg";
 import GrassField from '../data/nat_pic_grass.jpeg';
-import { Controller, Scene } from 'react-scrollmagic';
-import { Animator, ScrollContainer, ScrollPage } from 'react-scroll-motion'
-
+import { motion, useAnimation } from 'framer-motion';
 
 
 export default function HomePage() {
+    const navigate = useNavigate();
 
 
         return (
             <div>
-                <ScrollContainer>
-                    <ScrollPage>
-                        <Animator>
-                            <h1 className="main-intro-header">Welcome Home</h1>
-                            <div className="myImage"> 
-                                <img className="home-page-image" src={GrassField}/>
-                            </div>
-                        </Animator>
-                    </ScrollPage>
-                </ScrollContainer>
+                <motion.h1 className="main-intro-header">Welcome Home</motion.h1>
                 <div className='nav-links'>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>

@@ -1,3 +1,10 @@
+body {
+  background-image: url(./data/nat_pic_grass.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
