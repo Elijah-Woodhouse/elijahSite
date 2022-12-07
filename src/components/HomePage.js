@@ -24,20 +24,31 @@ export default function HomePage() {
 
         return (
             <div>
-                <h1 className={firstBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>Welcome Home</h1>
-                <h1 className={secondBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>My name is Elijah</h1>
-                <h1 className={thirdBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>I am a software developer and website designer</h1>
-                <h1 className={fourthBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>I mostly work with Python and React.js</h1>
-                <h1 className={fifthBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>Lorem Ipsum Solare Di Elite Commodo Pariatur</h1>
-                <div className='nav-links'>
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
+                
+                <div classname="header-items">
+                    <h1 className={firstBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>Welcome Home</h1>
                 </div>
-                <div className="first-break" ref={firstRef}>stop point</div>
-                <div className="second-break" ref={secondRef}>stop point</div>
-                <div className="third-break" ref={thirdRef}>stop point</div>
-                <div className="fourth-break" ref={fourthRef}>stop point</div>
-                <div className="fifth-break" ref={fifthRef}>stop point</div>
+
+                <div className="header-items">
+                    <h1 className={secondBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>My name is Elijah</h1>
+                </div>
+
+                <div className='header-itmes'>
+                    <h1 className={thirdBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>I am a software developer and website designer</h1>
+                </div>    
+
+                <div className="header-items">
+                    <h1 className={fourthBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>I mostly work with Python and React.js</h1>
+                </div>
+
+                <div className="header-items">
+                    <h1 className={fifthBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>Lorem Ipsum Solare Di Elite Commodo Pariatur</h1>
+                </div>
+                <div className="first-break" ref={firstRef}>.</div>
+                <div className="second-break" ref={secondRef}>.</div>
+                <div className="third-break" ref={thirdRef}>.</div>
+                <div className="fourth-break" ref={fourthRef}>.</div>
+                <div className="fifth-break" ref={fifthRef}>.</div>
                 <div className="HP-paragraph-one">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore 
