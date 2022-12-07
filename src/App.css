@@ -19,11 +19,20 @@ body {
   margin-top: 0;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
 .main-intro-header {
   background-color: rgb(254, 252, 243, 0);
   padding: 5%;
   margin: 0; 
-  position: absolute;
+  position: fixed;
   margin: 10% 30% 50% 31%;
   font-size: 3em;
 }
@@ -65,4 +74,12 @@ nav {
   flex-wrap: wrap;
   width: 30%;
   margin: 5% 20% 20% 50%
+}
+
+.first-break {
+  margin-top: 300%;
+}
+
+.second-break {
+  margin-top: 300%;
 }

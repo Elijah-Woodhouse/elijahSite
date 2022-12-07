@@ -1,22 +1,33 @@
 import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useRouteMatch, useNavigate } from 'react-router-dom';
 import BoulderImage from "../data/nat_pic_boulders_and_tree.jpeg";
 import FenceImage from "../data/nat_pic_fence.jpeg";
 import GrassField from '../data/nat_pic_grass.jpeg';
-import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 export default function HomePage() {
     const navigate = useNavigate();
+    const fadeInOutStyles = "break-fadeInOut";
+    const hiding = "item-not-in-view";
 
+    const { ref: firstRef, inView: firstBreakIsVisibile} = useInView();
+    const { ref: secondRef, inView: secondBreakIsVisibile} = useInView();
+
+    useEffect(() => {
+        console.log(firstBreakIsVisibile, secondBreakIsVisibile);
+    }, [firstBreakIsVisibile, secondBreakIsVisibile])
 
         return (
             <div>
-                <motion.h1 className="main-intro-header">Welcome Home</motion.h1>
+                <h1 className={firstBreakIsVisibile ? `${fadeInOutStyles}` :`${hiding}`}>Welcome Home</h1>
                 <div className='nav-links'>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                 </div>
+                <div className="first-break" ref={firstRef}>stop point</div>
+                <div className="second-break" ref={secondRef}>stop point</div>
                 <div className="HP-paragraph-one">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore 
